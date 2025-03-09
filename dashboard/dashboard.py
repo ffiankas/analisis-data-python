@@ -9,8 +9,8 @@ st.set_page_config(layout="wide", page_title="Dashboard Penyewaan Sepeda 2012")
 st.sidebar.header("Filter Data")
 selected_year = st.sidebar.selectbox("Pilih Tahun", options=[2011, 2012], index=1)
 
-day_df = pd.read_csv("day.csv")
-hour_df = pd.read_csv("hour.csv")
+day_df = pd.read_csv("dashboard/day.csv")
+hour_df = pd.read_csv("dashboard/hour.csv")
 day_df = day_df[day_df["yr"] == (selected_year - 2011)]
 
 season_labels = {1: "Spring", 2: "Summer", 3: "Fall", 4: "Winter"}
